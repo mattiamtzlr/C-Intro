@@ -42,7 +42,24 @@ int main(void)
   // The comma can also be used to have multiple iterators in a for loop:
   int a;
   int b;
-  for (a = 0, b = 9; a < 10; a++, b--) {
+  for (a = 0, b = 4; a < 5; a++, b--) {
     printf("a=%d, b=%d\n", a, b);
   }
+
+  /* The 'sizeof' operator returns the size (in bytes) in memory of a variable or
+   * data type. It returns a value of type size_t, which is an unsigned integer,
+   * often used as a counter.
+   * The format specifier of size_t is %zu (positive), or %zd (negative) */
+
+  int c = 999;
+  printf("sizeof c = 999: %zu\n", sizeof c);
+  printf("sizeof 2 + 7: %zu\n", sizeof(2 + 7));
+  printf("sizeof 3.14: %zu\n", sizeof 3.14);
+
+  // We can also take the size of a type (has to be put in parentheses)
+  printf("sizeof int: %zu\n", sizeof(int));
+  printf("sizeof char: %zu\n", sizeof(char));
+
+  /* Important to note is that sizeof is a compile-time operation, meaning the
+   * result of the expression is determined at compile-time not at runtime. */
 }
