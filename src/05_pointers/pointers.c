@@ -87,7 +87,9 @@ int main(void) {
   int *q;
   q = NULL;
 
-  // *q = 12; // crash or some prohibited memory access (Segmentation fault)
+  #ifdef ERROR
+  *q = 12; // crash or some prohibited memory access (Segmentation fault)
+  #endif
 
 
 
