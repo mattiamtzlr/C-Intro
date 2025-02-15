@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Passing single dimensional arrays to functions ===========================
+/* Passing single dimensional arrays to functions =============================
  *
  * There are multiple different ways of passing an array to a function, among
  * the three listed below, the first being by far the most common.

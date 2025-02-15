@@ -53,7 +53,7 @@ int main(void) {
 
 
 
-/* String termination =======================================================
+/* String termination =========================================================
  *
  * In C, strings are defined by:
  *   1. a pointer to the first character in the string, and
