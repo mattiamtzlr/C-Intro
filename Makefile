@@ -19,3 +19,6 @@ $(OUT_DIR)/%: $(SRC_DIR)/%.c
 	#@echo "Compiled $< to $@"
 
 .PHONY: run
+
+clean:
+	rm -r out
