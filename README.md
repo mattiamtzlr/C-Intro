@@ -7,9 +7,9 @@ A direct link to the reference part of the HTML guide is [here](https://beej.us/
 ## Usage
 To compile and run any of the files in the `src` directory run:
 ```bash
-make run FILE=0x_folder/filename
+make run FILE=xx_folder/filename
 ```
-while in the root directory. You don't need to specify the file extension. The compiled binary will be in `out/0x_folder`.  
+while in the root directory. You don't need to specify the file extension. The compiled binary will be in `out/xx_folder`.  
 So for example:
 ```bash
 make run FILE=03_variables_statements/operators
