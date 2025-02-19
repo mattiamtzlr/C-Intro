@@ -38,4 +38,17 @@ int main(void) {
   printf("\n");
 
   free(p); // this simultaneously frees q, as they point to the same region
+
+
+
+  /* realloc() with NULL ======================================================
+   *
+   * The following two lines are equivalent, which is useful if we have a
+   * reallocation loop and don't want to special-case the first malloc. */
+
+  void *a = malloc(42);
+  void *b = realloc(NULL, 42);
+
+  free(a);
+  free(b);
 }
