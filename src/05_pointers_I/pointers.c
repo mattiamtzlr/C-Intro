@@ -107,9 +107,33 @@ int main(void) {
 
 
 
-  // sizeof works with pointers and dereferenced pointers as well.
-  int *r;
-  printf("pointer r uses %zu bytes of memory\n", sizeof r);
-  printf("dereferenced r uses %zu bytes of memory\n", sizeof *r);
+  int x = 5;
+  int y = 7;
+
+  /* Pointers and const =======================================================
+   *
+   * The first of the following lines creates a pointer to a constant object,
+   * thus the value of the pointed to object cannot be changed. The pointer
+   * itself may be redefined.
+   *
+   * The second line creates a constant pointer to a mutable object, meaning
+   * the pointer itself cannot be modified, but the object it points to can. */
+
+  int const *r = &x;
+
+  #ifdef ERROR
+  *r = 9;
+  #endif
+
+  r = &y;
+
+
+  int *const s = &x;
+
+  *s = 9;
+
+  #ifdef ERROR
+  s = &y;
+  #endif
 
 }
