@@ -2,3 +2,6 @@ resources/
 out/
 files/output.*
 main
+foo
+bar
+baz
