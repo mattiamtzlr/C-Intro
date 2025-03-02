@@ -6,7 +6,14 @@ double f2(double x) { return exp(x); }
 double f3(double x) { return sqrt(x); }
 
 /* Define Function as a pointer to a function taking a double and returning
- * a double. */
+ * a double.
+ *
+ * In general, we can declare a pointer to a function as follows:
+ *   <output_type> (*<pointer_name>)(<input_type>)
+ *
+ * For example, double (*g)(int) declares g as a pointer to a function taking an
+ * int, and returning a double. */
+
 typedef double (*Function)(double);
 
 int main(void) {
